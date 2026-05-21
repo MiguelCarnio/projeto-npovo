@@ -1,33 +1,38 @@
-
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('caminho/para/'fonte.woff2) format('woff2'),
+       url('caminho/para/fonte.ttf') format('truetype');
+ }
+ body {
+  font-family: 'MinhaFonte', sans-serif;
+ }
 a:visited,a:hover,a:active {
-    background-color: #4a4a4a;
+    background-color: rgb(13, 96, 14);
   }
   
 nav{
     font-size: 0;
-    margin-top: 50px;
-    background-color: rgb(131, 131, 131);
-    padding: 20px;
+    background-color: rgb(38, 188, 40);
+    padding: 17px;
   }
 a{
-    font-size: medium;
-    background-color: rgb(131, 131, 131);
+    font-size: 23px;
+    background-color: rgb(38, 188, 40);
     color: aliceblue;
-    padding: 20px;
+    padding: 17px;
     text-decoration-line: none;
     margin-right: 0px;
     margin-left: 0px;
-    gap: 0px;
 
   }
   header{
     align-items: center;
     text-align: center;
-
-    background-color: #ededed;
+    background-color: rgb(54, 245, 57);
 
   }
   #logo{
+    margin-left: 20px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -37,4 +42,7 @@ a{
   main{
  padding: 20px; 
 }
-  body{margin: 0;}
+#yoshi{
+  margin-left: 10px;
+}
+  body{margin: 0;color:white}
