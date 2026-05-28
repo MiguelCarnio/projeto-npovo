@@ -1,25 +1,19 @@
-@font-face {
-  font-family: 'MinhaFonte';
-  src: url('caminho/para/'fonte.woff2) format('woff2'),
-       url('caminho/para/fonte.ttf') format('truetype');
- }
- body {
-  font-family: 'MinhaFonte', sans-serif;
- }
 a:visited,a:hover,a:active {
-    background-color: rgb(13, 96, 14);
+    background-color: rgb(50, 218, 52);
+
   }
   
 nav{
     font-size: 0;
     background-color: rgb(38, 188, 40);
-    padding: 17px;
+    padding: 1.3rem;
   }
 a{
-    font-size: 23px;
-    background-color: rgb(38, 188, 40);
+    font-size: 1.5rem;
+    background-color:rgb(38, 188, 40);
     color: aliceblue;
-    padding: 17px;
+    padding: 1.3rem;
+    font-style: italic;
     text-decoration-line: none;
     margin-right: 0px;
     margin-left: 0px;
@@ -28,21 +22,34 @@ a{
   header{
     align-items: center;
     text-align: center;
-    background-color: rgb(54, 245, 57);
+    background-color: rgb(50, 218, 52);
 
   }
   #logo{
-    margin-left: 20px;
-    display: flex;
+        display: flex;
     align-items: center;
-    text-align: center;
+    font-size: 2.1rem;
+    background-size:auto;
+    background-color: aqua;
+
 
 
   }
   main{
  padding: 20px; 
 }
-#yoshi{
+#yoshi, #ovo{
   margin-left: 10px;
+  margin-right: 10px;
 }
-  body{margin: 0;color:white}
+
+#sla{
+
+  text-align: center;
+  align-items: center;
+  display: flex;
+  
+
+}
+
+body{margin: 0;color:white}
