@@ -6,15 +6,18 @@ a:visited,a:hover,a:active {
 nav{
     font-size: 0;
     background-color: rgb(38, 188, 40);
-    padding: 1.3rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
   }
 a{
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color:rgb(38, 188, 40);
     color: aliceblue;
     padding: 1.3rem;
     font-style: italic;
     text-decoration-line: none;
+
     margin-right: 0px;
     margin-left: 0px;
 
@@ -22,22 +25,19 @@ a{
   header{
     align-items: center;
     text-align: center;
-    background-color: rgb(50, 218, 52);
+    background-color: #32da34;
 
   }
   #logo{
-        display: flex;
+    display: flex;
+    text-align: center;
     align-items: center;
-    font-size: 2.1rem;
-    background-size:auto;
-    background-color: aqua;
+    font-size: 1.2rem;
 
 
 
   }
-  main{
- padding: 20px; 
-}
+
 #yoshi, #ovo{
   margin-left: 10px;
   margin-right: 10px;
@@ -47,9 +47,16 @@ a{
 
   text-align: center;
   align-items: center;
+
   display: flex;
   
 
 }
+#textos{
 
-body{margin: 0;color:white}
+  align-items: center;
+
+  
+}
+body{margin: 0;color:rgb(255, 255, 255);
+background-color: rgb(40, 146, 45);}
