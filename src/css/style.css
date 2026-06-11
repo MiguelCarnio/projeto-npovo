@@ -49,6 +49,8 @@ header a{
 
   
 }
+  
+
 body{margin: 0;color:rgb(255, 255, 255);
 background-color: rgb(40, 146, 45);}
 main{
@@ -67,11 +69,39 @@ aside{
 }
 #apresentacao{
   display: flex;
+  background-color: rgb(9, 107, 19);
+  padding: 20px;
+  margin: 0;
+  font-size: 1.2rem;
+
 }
-img{
+section img{
   margin-top: 1.5rem;
+  border-radius: 40px;
 }
 aside a{
   width: 100%;
 }
+p{
+  text-align: justify;
+  width: 95%;
+}
+#mario p{
+  display: right;
+  text-align: right;
+  align-items: top;
+  justify-content: center;
 
+}
+#mario{
+  margin: 0;
+  background-color: rgb(24, 89, 27);
+  padding: 10px;
+  border-radius: 20px;
+
+}
+#mario img{
+  border: 5px solid rgb(39, 120, 42);
+  margin-top: 0;
+  border-radius: 20px;
+}
