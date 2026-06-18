@@ -5,7 +5,7 @@ html { scroll-behavior: smooth; }
 
 body {
   color: #fff;
-  background: linear-gradient(135deg, rgb(40, 146, 45), rgb(30, 120, 35));
+  background:  rgb(30, 120, 35);
   padding-top: clamp(3.5rem, 10vh, 5.5rem);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -13,11 +13,11 @@ body {
 h1 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
 h2 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); margin: clamp(0.8rem, 2vh, 1.5rem) 0; }
 h3 { font-size: clamp(1rem, 2vw, 1.3rem); }
-p { font-size: clamp(0.9rem, 1.8vw, 1.1rem); line-height: 1.6; text-align: justify; margin: clamp(0.5rem, 1vh, 1rem) 0; }
+p { font-size: clamp(1.2rem, 1.8vw, 1.1rem); line-height: 1.6; text-align: justify; margin: clamp(0.5rem, 1vh, 1rem) 0; }
 
 
 header {
-  background: linear-gradient(135deg, rgba(34, 158, 36, 0.95), rgba(43, 192, 45, 0.9));
+  background: rgba(34, 158, 36, 0.95);
   display: flex;
   position: fixed;
   top: 0;
@@ -49,7 +49,7 @@ main {
 }
 
 aside {
-  background: linear-gradient(180deg, #18591b, #144616);
+  background: #144616;
   width: 250px;
   position: fixed;
   left: 0;
@@ -115,8 +115,7 @@ article { margin: 2rem 0; background-color: rgba(9, 107, 19, 0.5); padding: 1.5r
 }
 
 
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background: rgba(34, 158, 36, 0.7); border-radius: 5px; }
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -124,10 +123,15 @@ body {
   color: #fff;
   background: linear-gradient(135deg, rgb(40, 146, 45), rgb(30, 120, 35));
   padding-top: clamp(3.5rem, 10vh, 5.5rem);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
+.voltar-ao-topo {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
+    display: block !important;
+}
 header {
   background: linear-gradient(135deg, rgba(34, 158, 36, 0.95), rgba(43, 192, 45, 0.9));
   display: flex;
