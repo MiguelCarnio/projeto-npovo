@@ -1,107 +1,577 @@
-a:visited,a:hover,a:active {
-    background-color: rgb(43, 192, 45);
-
-  }
-header{
-    font-size: 0;
-    background-color:rgb(34, 158, 36);
-    display: flex;
-    text-align: center;
-    align-items: center;
-  }
-header a{
-    font-size: 1rem;
-    background-color:rgb(34, 158, 36);
-    color: aliceblue;
-    padding: 2.4rem;
-    font-style: italic;
-    text-decoration-line: none;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  #logo{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 1.2rem;
-  }
-
-#yoshi, #ovo{
-  margin-left: 10px;
-  margin-right: 10px;
+/* ========== RESET E VARIÁVEIS GLOBAIS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#sla{
-  margin-left: 5%;
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 146, 45);
+  padding-top: clamp(3.5rem, 10vh, 5.5rem);
+  font-family: Arial, sans-serif;
+}
 
+/* ========== TIPOGRAFIA ========== */
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  margin: clamp(0.8rem, 2vh, 1.5rem) 0;
+}
+
+h3 {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  line-height: 1.6;
+  text-align: justify;
+  margin: clamp(0.5rem, 1vh, 1rem) 0;
+}
+
+/* ========== HEADER ========== */
+header {
+  font-size: 0;
+  background-color: rgba(34, 158, 36, 0.9);
+  display: flex;
   text-align: center;
   align-items: center;
-
-  display: flex;
-  
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  padding: clamp(0.5rem, 2vh, 1rem) clamp(0.5rem, 2vw, 1rem);
+  gap: clamp(0.5rem, 2vw, 1rem);
 }
-#textos{
 
+#sla {
+  display: flex;
   align-items: center;
-
-  
+  gap: clamp(0.3rem, 1vw, 0.8rem);
+  flex: 1;
+  min-width: auto;
 }
-  
 
-body{margin: 0;color:rgb(255, 255, 255);
-background-color: rgb(40, 146, 45);}
-main{
+#logo {
   display: flex;
-  
+  align-items: center;
+  gap: clamp(0.3rem, 1vw, 0.6rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
 }
-section{
-  padding: 30px;
-  width: 88%;
-  background-color: rgb(27, 139, 29);
+
+#ovo {
+  height: clamp(2rem, 5vh, 3rem);
+  width: auto;
 }
-aside{
-  padding: 30px;
+
+#textos {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.3rem, 1vw, 0.8rem);
+  flex-wrap: wrap;
+  margin-left: 0;
+  flex: 1 1 auto;
+}
+
+header a {
+  font-size: clamp(0.85rem, 1.8vw, 1.3rem);
+  color: aliceblue;
+  padding: clamp(0.6rem, 1.5vh, 1.2rem) clamp(0.4rem, 1vw, 0.8rem);
+  font-style: italic;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+header a:hover {
+  background-color: rgb(43, 192, 45, 0.9);
+}
+
+/* ========== MAIN LAYOUT ========== */
+main {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - clamp(3.5rem, 10vh, 5.5rem));
+  gap: 0;
+}
+
+/* ========== SIDEBAR / ASIDE ========== */
+aside {
   background-color: rgb(24, 89, 27);
-  width: 11%;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  padding: clamp(1rem, 2vh, 1.5rem);
+  overflow-y: auto;
+  z-index: 999;
+  width: clamp(200px, 15vw, 250px);
+  min-height: 100%;
+  flex-shrink: 0;
 }
-#apresentacao{
+
+aside h1 {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-bottom: clamp(1rem, 2vh, 1.5rem);
+  border-bottom: 2px solid rgba(34, 158, 36, 0.9);
+  padding-bottom: clamp(0.5rem, 1vh, 0.8rem);
+}
+
+#links2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#links2 a {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: aliceblue;
+  padding: clamp(0.8rem, 1.5vh, 1.2rem);
+  text-decoration: none;
+  background-color: rgb(9, 107, 19);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+#links2 a:hover {
+  background-color: rgba(34, 158, 36, 0.85);
+}
+
+/* ========== SECTION ========== */
+section {
+  flex: 1;
+  padding: clamp(1rem, 3vh, 2rem);
+  background-color: rgb(27, 139, 29);
+  overflow-y: auto;
+  min-width: 0;
+}
+
+section h1 {
+  margin-bottom: clamp(1rem, 2vh, 1.5rem);
+  border-bottom: 2px solid rgba(34, 158, 36, 0.9);
+  padding-bottom: clamp(0.8rem, 1.5vh, 1.2rem);
+}
+
+/* ========== CONTEÚDO APRESENTAÇÃO ========== */
+#apresentacao {
   display: flex;
   background-color: rgb(9, 107, 19);
-  padding: 20px;
-  margin: 0;
-  font-size: 1.2rem;
+  padding: clamp(1rem, 2vh, 1.5rem);
+  margin: clamp(1rem, 2vh, 1.5rem) 0;
+  gap: clamp(1rem, 2vw, 2rem);
+  flex-wrap: wrap;
+  scroll-margin-top: clamp(5rem, 15vh, 8rem);
+  align-items: flex-start;
+}
 
+#apresentacao > div {
+  flex: 1;
+  min-width: 280px;
 }
-section img{
-  margin-top: 1.5rem;
-  border-radius: 40px;
-}
-aside a{
-  width: 100%;
-}
-p{
-  text-align: justify;
-  width: 95%;
-}
-#mario p{
-  display: right;
-  text-align: right;
-  align-items: top;
-  justify-content: center;
 
-}
-#mario{
+#mario {
   margin: 0;
   background-color: rgb(24, 89, 27);
-  padding: 10px;
-  border-radius: 20px;
-
+  padding: clamp(0.8rem, 1.5vh, 1.2rem);
+  border-radius: clamp(0.8rem, 2vw, 1.2rem);
+  flex: 0 1 auto;
+  min-width: 220px;
+  max-width: 100%;
 }
-#mario img{
-  border: 5px solid rgb(39, 120, 42);
-  margin-top: 0;
-  border-radius: 20px;
+
+#mario img {
+  border: 2px solid rgb(39, 120, 42);
+  border-radius: clamp(0.8rem, 2vw, 1.2rem);
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+}
+
+#mario p {
+  text-align: center;
+  margin: clamp(0.6rem, 1vh, 1rem) 0 0 0;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+}
+
+section img {
+  margin-top: clamp(0.8rem, 1.5vh, 1.2rem);
+  border-radius: clamp(0.8rem, 2vw, 1.2rem);
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+article {
+  margin: clamp(1.5rem, 3vh, 2.5rem) 0;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: rgb(24, 89, 27);
+  padding: clamp(1.5rem, 3vh, 2rem) clamp(1rem, 2vw, 1.5rem);
+  text-align: center;
+  margin-top: clamp(2rem, 3vh, 3rem);
+  border-top: 2px solid rgba(34, 158, 36, 0.9);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 clamp(1.5rem, 2vh, 2rem) 0;
+  padding: 0;
+}
+
+.footer-section {
+  flex: 0 1 auto;
+  min-width: clamp(150px, 25vw, 220px);
+  text-align: left;
+  width: auto;
+}
+
+.footer-section h3 {
+  color: aliceblue;
+  margin: 0 0 clamp(0.8rem, 1.5vh, 1.2rem) 0;
+  border-bottom: 2px solid rgba(34, 158, 36, 0.9);
+  padding-bottom: clamp(0.5rem, 1vh, 0.8rem);
+}
+
+.footer-section p {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: aliceblue;
+  text-align: left;
+  margin: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: clamp(0.4rem, 0.8vh, 0.6rem) 0;
+}
+
+.footer-section a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-section a:hover {
+  color: rgb(43, 192, 45);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: rgb(9, 107, 19);
+  padding: clamp(0.8rem, 1.5vh, 1.2rem);
+  font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+  border-top: 1px solid rgba(34, 158, 36, 0.6);
+  width: 100%;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: aliceblue;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: aliceblue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: rgb(43, 192, 45);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+
+  #sla {
+    flex: 1 1 100%;
+    order: 1;
+  }
+
+  #textos {
+    flex: 1 1 100%;
+    order: 2;
+    margin-left: 0 !important;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  header a {
+    flex: 1;
+    padding: clamp(0.8rem, 1.5vh, 1rem);
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    max-height: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: clamp(0.5rem, 1vh, 1rem);
+    padding: clamp(0.8rem, 1.5vh, 1.2rem);
+    margin-bottom: clamp(1rem, 2vh, 1.5rem);
+  }
+
+  aside h1 {
+    grid-column: 1 / -1;
+    margin-bottom: clamp(0.5rem, 1vh, 1rem);
+  }
+
+  #links2 {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0;
+  }
+
+  #links2 a {
+    padding: clamp(0.8rem, 1.5vh, 1rem);
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  section {
+    padding: clamp(1rem, 2vh, 1.5rem);
+  }
+
+  #apresentacao {
+    flex-direction: column;
+    padding: clamp(0.8rem, 1.5vh, 1.2rem);
+  }
+
+  #apresentacao > div {
+    min-width: 100%;
+  }
+
+  #mario {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: clamp(1.5rem, 2vh, 2rem);
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    border-bottom-width: 1px;
+  }
+}
+
+/* ========== MOBILE (480px e abaixo) ========== */
+@media (max-width: 480px) {
+  body {
+    padding-top: clamp(3rem, 8vh, 4.5rem);
+  }
+
+  header {
+    padding: clamp(0.4rem, 1.5vh, 0.8rem) clamp(0.3rem, 1vw, 0.6rem);
+    flex-wrap: wrap;
+  }
+
+  #sla {
+    flex: 1 1 100%;
+    order: 1;
+    gap: clamp(0.2rem, 0.5vw, 0.4rem);
+  }
+
+  #logo {
+    gap: clamp(0.2rem, 0.5vw, 0.4rem);
+  }
+
+  #logo h1 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+  }
+
+  #ovo {
+    height: clamp(1.5rem, 4vh, 2.5rem);
+  }
+
+  #textos {
+    flex: 1 1 100%;
+    order: 2;
+    gap: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  header a {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    padding: clamp(0.5rem, 1vh, 0.8rem) clamp(0.3rem, 0.5vw, 0.5rem);
+    flex: 1 1 auto;
+  }
+
+  aside {
+    padding: clamp(0.5rem, 1vh, 0.8rem);
+    gap: clamp(0.3rem, 0.8vh, 0.5rem);
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: clamp(0.8rem, 1.5vh, 1rem);
+  }
+
+  aside h1 {
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    margin-bottom: clamp(0.4rem, 0.8vh, 0.6rem);
+  }
+
+  #links2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  #links2 a {
+    padding: clamp(0.6rem, 1.2vh, 0.9rem);
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  section {
+    padding: clamp(0.8rem, 1.5vh, 1rem);
+  }
+
+  section h1 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.8rem, 1.5vh, 1rem);
+  }
+
+  h2 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin: clamp(0.6rem, 1.2vh, 1rem) 0;
+  }
+
+  p {
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+  }
+
+  #apresentacao {
+    padding: clamp(0.6rem, 1.2vh, 0.9rem);
+    gap: clamp(0.6rem, 1.2vh, 1rem);
+    flex-direction: column;
+  }
+
+  #apresentacao > div {
+    min-width: 100%;
+  }
+
+  #mario {
+    padding: clamp(0.6rem, 1.2vh, 0.9rem);
+    min-width: auto;
+  }
+
+  #mario p {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+  }
+
+  footer {
+    padding: clamp(1rem, 2vh, 1.5rem) clamp(0.5rem, 1vw, 0.8rem);
+    margin-top: clamp(1.5rem, 2.5vh, 2rem);
+  }
+
+  .footer-content {
+    gap: clamp(0.8rem, 1.5vh, 1.2rem);
+  }
+
+  .footer-section {
+    min-width: clamp(120px, 45vw, 160px);
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    margin: 0 0 clamp(0.5rem, 0.8vh, 0.7rem) 0;
+  }
+
+  .footer-section p {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+  }
+
+  .footer-section a {
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+  }
+
+  .footer-bottom {
+    padding: clamp(0.6rem, 1.2vh, 0.9rem);
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  }
+}
+
+/* ========== MUITO PEQUENO (320px e abaixo) ========== */
+@media (max-width: 320px) {
+  #sla {
+    flex-direction: column;
+    gap: clamp(0.2rem, 0.3vw, 0.3rem);
+  }
+
+  #logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #textos {
+    flex-direction: column;
+  }
+
+  header a {
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    padding: clamp(0.4rem, 0.8vh, 0.6rem) clamp(0.2rem, 0.3vw, 0.3rem);
+  }
+
+  aside {
+    grid-template-columns: 1fr;
+  }
+
+  #links2 {
+    grid-template-columns: 1fr;
+  }
+
+  #links2 a {
+    border-right: none;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
 }
