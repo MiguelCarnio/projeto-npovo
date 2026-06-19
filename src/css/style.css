@@ -98,9 +98,9 @@ article { margin: 2rem 0; background-color: rgba(9, 107, 19, 0.5); padding: 1.5r
 .voltar-ao-topo {
   position: fixed;
   bottom: 40px;
-  right: 30px;
+  right: 40px;
   background: rgba(68, 255, 70, 0.95);
-  padding: 15px;
+  padding: 25px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 999;
